@@ -10,7 +10,7 @@ services:
     volumes:
       - .:/app-backend
     environment:
-      DATABASE_LOCAL_HOST_URL: ${DATABASE_LOCAL_HOST_URL}
+      DATABASE_URL: ${DATABASE_URL}
     depends_on:
       - db
     ports:

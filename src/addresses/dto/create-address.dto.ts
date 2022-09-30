@@ -1,9 +1,11 @@
+import { IsString, MaxLength } from "class-validator";
+
 export class CreateAddressDto {
   street: string;
-  number?: number;
+  number: number;
   district: string;
   city: string;
   state: string;
   zipCode: string;
-  complement?: string;
+  complement: string;
 }
