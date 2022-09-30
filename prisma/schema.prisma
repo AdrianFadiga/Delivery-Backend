@@ -18,7 +18,7 @@ model Address {
   city String @db.VarChar(20)
   state String @db.VarChar(20)
   zipCode String @map("zip_code") @db.VarChar(15)
-  description String @db.VarChar(20)
+  complement String @db.VarChar(20)
 
   UserAddress UserAdress[]
   RestaurantAddress Restaurant[]
