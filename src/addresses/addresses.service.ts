@@ -4,14 +4,16 @@ import { CreateAddressDto } from './dto/create-address.dto';
 import { UpdateAddressDto } from './dto/update-address.dto';
 import { AddressEntity } from './entities/address.entity';
 
+
 @Injectable()
 export class AddressesService {
   constructor(private databaseService: DatabaseService) {}
-  create(createAddressDto: CreateAddressDto) {
-    const address = new AddressEntity(createAddressDto);
-    this.databaseService.address.create({
-      data: { ...address },
-    });
+ async create(createAddressDto: CreateAddressDto) {
+    const address = await AddressEntity.create(createAddressDto);
+    return address;
+    // this.databaseService.address.create({
+    //   data: { ...address },
+    // });
   }
 
   findAll() {

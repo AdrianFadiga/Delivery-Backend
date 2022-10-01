@@ -1,5 +1,3 @@
-import { IsString, MaxLength } from "class-validator";
-
 export class CreateAddressDto {
   street: string;
   number: number;
